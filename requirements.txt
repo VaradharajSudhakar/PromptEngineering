@@ -1,0 +1,15 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch
+torchvision
+torchaudio
+langchain
+openai
+dotnet
+langchain-openai
+langchain-community
+langchain-core
+langchain-text-splitters
+langchain-chroma
+bs4
+python-dotenv
+pypdf
