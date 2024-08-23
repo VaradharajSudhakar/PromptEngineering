@@ -1,3 +1,8 @@
+# Author: Sudhakar Varadharaj
+# Date: 08/04/2024
+# Description: ZERO SHOT PROMPTING 
+# Zero-shot prompting is when a model is asked to produce output without examples or training data.
+
 import os
 from openai import OpenAI
 from dotenv import load_dotenv

@@ -1,3 +1,9 @@
+# Author: Sudhakar Varadharaj
+# Date: 08/04/2024
+# Description: CHAIN PROMPTING
+# Context and Few-Shot Prompting
+
+
 import os
 from openai import OpenAI
 from dotenv import load_dotenv

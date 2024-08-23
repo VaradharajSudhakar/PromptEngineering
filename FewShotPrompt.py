@@ -1,3 +1,20 @@
+# Author: Sudhakar Varadharaj
+# Date: 08/04/2024
+# Description: ZERO SHOT PROMPTING 
+# Few-shot prompting is a technique used to fine-tune a language model by providing a small number of examples or prompts.
+# This allows the model to learn new tasks or concepts quickly and efficiently.
+# Few-shot prompting can be used to improve the performance of a language model on specific tasks or domains.
+# It can also help the model generate more accurate and relevant outputs by providing context and constraints.
+# Few-shot prompting is a powerful tool for customizing and adapting language models to suit different applications and use cases.
+# Few-shot prompting can be combined with other techniques such as zero-shot prompting and chain prompting to create more complex and sophisticated interactions with language models.
+# Few-shot prompting is a versatile and flexible approach that can be applied to a wide range of natural language processing tasks and challenges.  
+
+# Few Shot Prompt Example:
+# In this example, we will use a few-shot prompt to guide the model in generating the emotion associated with a given color.
+# We will provide several examples of colors and emotions to help the model learn the relationship between them.
+# The model will then use this information to generate the emotion associated with a new color that was not included in the examples.
+# The few-shot prompt will provide clear instructions and examples to guide the model in generating the desired output.
+
 import os
 from langchain_openai import ChatOpenAI
 from langchain.chains import LLMChain
@@ -9,6 +26,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Load the environment variables
+
 OPENAI_API_BASE = os.getenv("OPENAI_API_BASE")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("MODEL")
@@ -17,6 +35,8 @@ MODEL = os.getenv("MODEL")
 llm = ChatOpenAI(model_name=MODEL, api_key=OPENAI_API_KEY, base_url=OPENAI_API_BASE, temperature=0)
 
 # Define the prompt system example
+prompt_system = "You are an AI assistant that can identify emotions associated with colors."
+
 examples = [
     {"color": "red", "emotion": "passion"},
     {"color": "blue", "emotion": "calm"},
@@ -24,8 +44,8 @@ examples = [
     {"color": "yellow", "emotion": "happiness"}
 ]
 
-# Define the template
 
+# Define the template
 example_format_template = """
 Color: {color}
 Emotion: {emotion}\n
