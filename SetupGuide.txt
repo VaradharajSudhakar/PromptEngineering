@@ -1,0 +1,72 @@
+
+1.Hello World Program Setup Guide:
+
+    Step 1 : Install Python Latest Version (URL: https://www.python.org/)
+
+    Step 2 : Install VS Code (URL:  https://code.visualstudio.com/)
+
+    Step 3 : Install LM Studio (URL: https://lmstudio.ai/)
+
+    Step 4 : Start LM Studio with a Model (Meta Llama 3 / any compatible model) 
+
+    Step 5 : Create a folder in VS Code and start hello world program 
+
+    Step 6 : Sample Program Setup 
+
+	    a. Create .env file and add below Keys
+
+		    OPENAI_API_KEY=lm-studio
+		    OPENAI_API_BASE=http://localhost:8088/v1
+		
+	    b. Create requirements.txt file and add the below libraries
+
+		    python-dotenv
+		    chromadb
+            langchain
+            langchain-community
+            langchain-experimental
+            langchain-openai
+            unstructured
+            docarray
+
+        c. Import the libraries based on requirements.txt file 
+        
+            ctrl + shift + p 
+                create python environment 
+                select .venv
+                select python path 
+                import will begin 
+                    you may get error based on libraries or packages
+            once environment is created,then proceed with step d
+            
+        d. Create HelloWorld.py file 
+            
+            import os
+            from dotenv import load_dotenv
+            from langchain_openai.chat_models import ChatOpenAI
+            from langchain_core.output_parsers import StrOutputParser
+            from langchain_core.prompts import PromptTemplate
+
+            load_dotenv()
+            OPENAI_API_BASE = os.getenv("OPENAI_API_BASE")
+            MODEL = "lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF"
+
+            llm_model = ChatOpenAI(openai_api_base=OPENAI_API_BASE, model=MODEL)
+
+            template = """What is the capital of {country}"""
+
+            prompt = PromptTemplate.from_template(template)
+
+            chain = prompt | llm_model 
+
+            result = chain.invoke(input="India")
+
+            print(result)
+
+            parser = StrOutputParser()
+
+            chain = prompt | llm_model | parser
+
+            result = chain.invoke(input="India")
+
+            print(result)
