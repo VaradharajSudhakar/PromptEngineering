@@ -1,0 +1,43 @@
+GenAI Learning Plan 
+	GenAI Overview 
+	LLM Overview
+	LLM Architecture 
+	Prompting 
+	Prompt Engineering 
+	LangChain ********
+	Prompting with LangChain
+	Retrieval Augmented Generation - RAG
+	Advanced RAG
+	Agents 
+	FineTuning 
+	CaseStudy 
+	Develop CaseStudy
+	Deployment 
+
+Team 
+	Viknesh 
+	Bharath 
+	Mathi
+	
+	Suvarna
+	Seetha
+	
+	Rajesh
+	Subburaj
+	 	
+	Suresh/ Seetha
+	
+	Sasi
+	Setto 
+	
+	Sudhakar
+	Paul 
+	
+	
+Python Libraries
+LM Studio / Open AI Key 
+Download model 
+VS Code 
+
+
+
