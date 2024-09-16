@@ -1,0 +1,10 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+langchain-openai>=0.1.21rc1
+langchain-community>=0.2.11
+langchain-core
+langchain_ollama
+langchain-text-splitters
+langchain-anthropic
+langgraph
+langchain
+python-dotenv
