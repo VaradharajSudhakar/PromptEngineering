@@ -1,0 +1,14 @@
+crewai
+llama-index
+dotnet
+python-dotenv
+streamlit
+streamlit-chat
+tavily-python
+langchain-ollama
+langchain-openai
+nest-asyncio
+litellm
+unstructured
+langchain-community
+duckduckgo-search
