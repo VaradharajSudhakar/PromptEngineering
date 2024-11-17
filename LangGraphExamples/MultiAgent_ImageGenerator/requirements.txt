@@ -1,0 +1,14 @@
+pillow
+requests
+streamlit
+langchain_ollama
+langgraph
+langchain
+langchain-community>=0.2.11
+langchain-core
+langchain_ollama
+langchain-text-splitters
+langchain-anthropic
+python-dotenv
+IPython
+langchain_openai
