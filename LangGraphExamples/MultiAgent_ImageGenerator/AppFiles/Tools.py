@@ -6,10 +6,12 @@ import requests
 import io
 from PIL import Image
 from langchain.tools.render import render_text_description
+import os
 
+API_KEY = os.getenv("LLMKEY")
 
 API_URL = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev"
-headers = {"Authorization": } # Please add the autorization key , which you can generate from hugging face for the black-forest-labs LLM
+headers = {"Authorization": API_KEY} # Please add the autorization key , which you can generate from hugging face for the black-forest-labs LLM
 
 tavily_tool = TavilySearchResults(max_results=2)
 
