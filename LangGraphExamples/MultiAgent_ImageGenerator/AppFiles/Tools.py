@@ -9,7 +9,7 @@ from langchain.tools.render import render_text_description
 
 
 API_URL = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": } # Please add the autorization key , which you can generate from hugging face for the black-forest-labs LLM
 
 tavily_tool = TavilySearchResults(max_results=2)
 
